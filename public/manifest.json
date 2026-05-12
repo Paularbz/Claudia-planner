@@ -1,0 +1,46 @@
+{
+  "name": "Planner da Amanda",
+  "short_name": "Planner",
+  "description": "Planejador pessoal inteligente — agenda, pendências e metas",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8f7ff",
+  "theme_color": "#8B5CF6",
+  "categories": ["productivity", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Hoje",
+      "url": "/dashboard",
+      "description": "Ver resumo do dia"
+    },
+    {
+      "name": "Nova tarefa",
+      "url": "/tasks?new=1",
+      "description": "Criar nova tarefa"
+    },
+    {
+      "name": "Pendências",
+      "url": "/pendencias",
+      "description": "Ver pendências"
+    }
+  ]
+}
