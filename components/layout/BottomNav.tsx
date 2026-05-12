@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard, CalendarDays, CheckSquare, Clock, Target,
-  Menu, X, Lightbulb, BookMarked, Briefcase, BookHeart, Wallet,
+  Menu, X, Lightbulb, BookMarked, Briefcase, BookHeart, Salad,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { usePendencias } from "@/lib/hooks/usePendencias";
@@ -21,8 +21,8 @@ const PRIMARY_ITEMS = [
 const EXTRA_ITEMS = [
   { href: "/insights",        label: "Insights",       icon: Lightbulb },
   { href: "/estudos",         label: "Estudos",         icon: BookMarked },
+  { href: "/dieta",           label: "Dieta",           icon: Salad },
   { href: "/profissional",    label: "Profissional",    icon: Briefcase },
-  { href: "/financeiro",      label: "Financeiro",      icon: Wallet },
   { href: "/espiritualidade", label: "Espiritualidade", icon: BookHeart },
 ];
 
@@ -52,7 +52,7 @@ export function BottomNav() {
                   onClick={() => setShowExtra(false)}
                   className={cn(
                     "flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-medium transition-all",
-                    active ? "bg-fuchsia-50 text-fuchsia-700" : "text-gray-500 hover:bg-pink-50"
+                    active ? "bg-purple-50 text-purple-700" : "text-gray-600 hover:bg-gray-50"
                   )}
                 >
                   <Icon size={17} strokeWidth={active ? 2.5 : 1.75} />
@@ -75,7 +75,7 @@ export function BottomNav() {
                 href={href}
                 className={cn(
                   "flex flex-col items-center justify-center gap-0.5 px-2 py-2 rounded-xl transition-all relative",
-                  active ? "text-fuchsia-600" : "text-gray-400"
+                  active ? "text-purple-600" : "text-gray-400"
                 )}
               >
                 <div className="relative">
@@ -86,8 +86,8 @@ export function BottomNav() {
                     </span>
                   )}
                 </div>
-                <span className={cn("text-[10px] font-medium", active ? "text-fuchsia-600" : "text-gray-400")}>{label}</span>
-                {active && <span className="w-1 h-1 rounded-full bg-fuchsia-500 mt-0.5" />}
+                <span className={cn("text-[10px] font-medium", active ? "text-purple-600" : "text-gray-400")}>{label}</span>
+                {active && <span className="w-1 h-1 rounded-full bg-purple-600 mt-0.5" />}
               </Link>
             );
           })}
@@ -96,12 +96,12 @@ export function BottomNav() {
             onClick={() => setShowExtra(!showExtra)}
             className={cn(
               "flex flex-col items-center justify-center gap-0.5 px-2 py-2 rounded-xl transition-all",
-              isExtraActive || showExtra ? "text-fuchsia-600" : "text-gray-400"
+              isExtraActive || showExtra ? "text-purple-600" : "text-gray-400"
             )}
           >
             {showExtra ? <X size={22} /> : <Menu size={22} strokeWidth={1.75} />}
-            <span className={cn("text-[10px] font-medium", isExtraActive || showExtra ? "text-fuchsia-600" : "text-gray-400")}>Mais</span>
-            {isExtraActive && <span className="w-1 h-1 rounded-full bg-fuchsia-500 mt-0.5" />}
+            <span className={cn("text-[10px] font-medium", isExtraActive || showExtra ? "text-purple-600" : "text-gray-400")}>Mais</span>
+            {isExtraActive && <span className="w-1 h-1 rounded-full bg-purple-600 mt-0.5" />}
           </button>
         </div>
       </nav>

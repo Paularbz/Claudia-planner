@@ -27,12 +27,6 @@ export function AppShell({ children, topBarAction }: AppShellProps) {
   useEffect(() => {
     if (isPublic) return;
 
-    // Em localhost, pula autenticação para facilitar visualização local
-    if (window.location.hostname === "localhost") {
-      setAuthed(true);
-      return;
-    }
-
     supabase.auth.getUser().then(({ data }) => {
       if (data.user) {
         setAuthed(true);
@@ -59,21 +53,21 @@ export function AppShell({ children, topBarAction }: AppShellProps) {
   }, []);
 
   if (!mounted) return (
-    <div className="min-h-screen bg-[#fff8f9] flex items-center justify-center">
-      <div className="w-8 h-8 border-4 border-fuchsia-200 border-t-fuchsia-500 rounded-full animate-spin" />
+    <div className="min-h-screen bg-[#f8f7ff] flex items-center justify-center">
+      <div className="w-8 h-8 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin" />
     </div>
   );
 
   if (isPublic) return <>{children}</>;
 
   if (!authed) return (
-    <div className="min-h-screen bg-[#fff8f9] flex items-center justify-center">
-      <div className="w-8 h-8 border-4 border-fuchsia-200 border-t-fuchsia-500 rounded-full animate-spin" />
+    <div className="min-h-screen bg-[#f8f7ff] flex items-center justify-center">
+      <div className="w-8 h-8 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin" />
     </div>
   );
 
   return (
-    <div className="min-h-screen bg-[#fff8f9]">
+    <div className="min-h-screen bg-[#f8f7ff]">
       <InitDb />
       {isMobile ? (
         <>

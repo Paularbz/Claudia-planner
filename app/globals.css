@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff8f9;
+  --background: #f8f7ff;
   --foreground: #1a1a2e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-sans: system-ui, -apple-system, sans-serif;
 }
 
 * {
@@ -69,18 +69,18 @@ body {
 }
 
 .fc-button-primary {
-  background: #D946EF !important;
-  border-color: #D946EF !important;
+  background: #8B5CF6 !important;
+  border-color: #8B5CF6 !important;
   border-radius: 8px !important;
 }
 
 .fc-button-primary:hover {
-  background: #C026D3 !important;
-  border-color: #C026D3 !important;
+  background: #7C3AED !important;
+  border-color: #7C3AED !important;
 }
 
 .fc-day-today {
-  background: #fdf4ff !important;
+  background: #f0ebff !important;
 }
 
 .fc-scrollgrid {

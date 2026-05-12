@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard, CalendarDays, CheckSquare, Clock, Target, Settings, Sparkles,
-  Lightbulb, BookMarked, Briefcase, BookHeart, Wallet,
+  Lightbulb, BookMarked, Briefcase, BookHeart, Salad,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
@@ -19,12 +19,12 @@ const CORE_ITEMS = [
 const PESSOAL_ITEMS = [
   { href: "/insights",        label: "Insights",       icon: Lightbulb },
   { href: "/estudos",         label: "Estudos",         icon: BookMarked },
+  { href: "/dieta",           label: "Dieta",           icon: Salad },
   { href: "/espiritualidade", label: "Espiritualidade", icon: BookHeart },
 ];
 
 const PROFISSIONAL_ITEMS = [
-  { href: "/profissional", label: "Projetos",    icon: Briefcase },
-  { href: "/financeiro",   label: "Financeiro",  icon: Wallet },
+  { href: "/profissional", label: "Projetos", icon: Briefcase },
 ];
 
 function NavItem({ href, label, icon: Icon }: { href: string; label: string; icon: React.ElementType }) {
@@ -34,13 +34,13 @@ function NavItem({ href, label, icon: Icon }: { href: string; label: string; ico
     <Link
       href={href}
       className={cn(
-        "flex items-center gap-3 px-3.5 py-2.5 rounded-2xl text-sm font-medium transition-all",
-        active ? "bg-fuchsia-50 text-fuchsia-700" : "text-gray-500 hover:bg-pink-50 hover:text-gray-900"
+        "flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all",
+        active ? "bg-purple-50 text-purple-700" : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
       )}
     >
       <Icon size={18} strokeWidth={active ? 2.5 : 1.75} />
       {label}
-      {active && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-fuchsia-500" />}
+      {active && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-purple-600" />}
     </Link>
   );
 }
@@ -50,12 +50,12 @@ export function Sidebar() {
     <aside className="fixed top-0 left-0 bottom-0 w-60 bg-white border-r border-gray-100 flex flex-col z-40 shadow-sm">
       <div className="px-6 py-7 border-b border-gray-100">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-2xl bg-gradient-to-br from-fuchsia-400 to-pink-500 flex items-center justify-center shadow-sm">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center shadow-sm">
             <Sparkles size={18} className="text-white" />
           </div>
           <div>
             <p className="text-sm font-bold text-gray-900">Planner</p>
-            <p className="text-xs text-gray-400">Agência Furta Cor</p>
+            <p className="text-xs text-gray-400">da Amanda</p>
           </div>
         </div>
       </div>

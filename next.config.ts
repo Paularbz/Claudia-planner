@@ -4,7 +4,6 @@ import withPWA from "@ducanh2912/next-pwa";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   turbopack: {},
-  typescript: { ignoreBuildErrors: true },
 };
 
 export default withPWA({
