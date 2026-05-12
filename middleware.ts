@@ -22,7 +22,7 @@ export async function middleware(request: NextRequest) {
     }
   );
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const isLocalhost = request.nextUrl.hostname === "localhost" || request.nextUrl.hostname === "127.0.0.1";
 
   const isPublic =
     request.nextUrl.pathname.startsWith("/login") ||
@@ -32,7 +32,11 @@ export async function middleware(request: NextRequest) {
     request.nextUrl.pathname === "/manifest.json" ||
     request.nextUrl.pathname === "/favicon.ico";
 
-  if (!user && !isPublic) {
+  if (isLocalhost || isPublic) return response;
+
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 

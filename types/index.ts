@@ -269,6 +269,68 @@ export interface EstudoEstacao {
   updatedAt: string;
 }
 
+// ── Financeiro ────────────────────────────────────────────────────────────────
+
+export type TipoTransacao = "receita" | "despesa";
+export type EntidadeFinanceira = "pessoal" | "profissional";
+
+export type CategoriaReceitaPessoal =
+  | "Salário / Pró-labore"
+  | "Freelance"
+  | "Investimentos"
+  | "Aluguel recebido"
+  | "Presente / Doação"
+  | "Outros";
+
+export type CategoriaReceitaProfissional =
+  | "Serviços prestados"
+  | "Consultoria"
+  | "Projeto"
+  | "Parceria"
+  | "Produto digital"
+  | "Outros";
+
+export type CategoriaDespesaPessoal =
+  | "Moradia"
+  | "Alimentação"
+  | "Transporte"
+  | "Saúde"
+  | "Educação"
+  | "Lazer"
+  | "Vestuário"
+  | "Assinaturas"
+  | "Pessoal"
+  | "Outros";
+
+export type CategoriaDespesaProfissional =
+  | "Fornecedores"
+  | "Colaboradores"
+  | "Marketing"
+  | "Ferramentas / Software"
+  | "Impostos"
+  | "Escritório"
+  | "Capacitação"
+  | "Outros";
+
+export type CategoriaFinanceira =
+  | CategoriaReceitaPessoal
+  | CategoriaReceitaProfissional
+  | CategoriaDespesaPessoal
+  | CategoriaDespesaProfissional;
+
+export interface Transacao {
+  id?: number;
+  tipo: TipoTransacao;
+  entidade: EntidadeFinanceira;
+  categoria: string;
+  descricao: string;
+  valor: number;
+  data: string;
+  observacoes?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 // ── Content Refs ──────────────────────────────────────────────────────────────
 
 export type ContentRefNetwork =
