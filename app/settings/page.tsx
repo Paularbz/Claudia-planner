@@ -206,7 +206,7 @@ export default function SettingsPage() {
               <Info size={18} className="text-purple-500" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-gray-900">Planner da Paula</p>
+              <p className="text-sm font-semibold text-gray-900">Planner da Claudia</p>
               <p className="text-xs text-gray-400">Versão 2.0 — dados na nuvem com Supabase</p>
             </div>
           </div>

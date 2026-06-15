@@ -5,7 +5,7 @@ import { AppShell } from "@/components/layout/AppShell";
 import { InitDb } from "@/components/InitDb";
 
 export const metadata: Metadata = {
-  title: "Planner da Paula",
+  title: "Planner da Claudia",
   description: "Planejador pessoal inteligente — agenda, pendências e metas",
   manifest: "/manifest.json",
   appleWebApp: {

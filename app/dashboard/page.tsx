@@ -43,7 +43,7 @@ export default function DashboardPage() {
       {/* Hero greeting */}
       <div className="bg-gradient-to-br from-purple-600 to-violet-700 rounded-3xl p-6 text-white shadow-lg">
         <p className="text-purple-200 text-sm font-medium mb-1 capitalize">{formatDateLong(today)}</p>
-        <h1 className="text-2xl font-bold mb-4">{(() => { const h = new Date().getHours(); return h < 12 ? "Bom dia" : h < 18 ? "Boa tarde" : "Boa noite"; })()}, Paula! ✨</h1>
+        <h1 className="text-2xl font-bold mb-4">{(() => { const h = new Date().getHours(); return h < 12 ? "Bom dia" : h < 18 ? "Boa tarde" : "Boa noite"; })()}, Claudia! ✨</h1>
 
         <div className="grid grid-cols-3 gap-3">
           <div className="bg-white/15 rounded-2xl p-3 text-center">
