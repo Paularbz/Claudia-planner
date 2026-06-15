@@ -55,7 +55,7 @@ export function Sidebar() {
           </div>
           <div>
             <p className="text-sm font-bold text-gray-900">Planner</p>
-            <p className="text-xs text-gray-400">da Amanda</p>
+            <p className="text-xs text-gray-400">da Claudia</p>
           </div>
         </div>
       </div>
